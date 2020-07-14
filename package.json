@@ -1,0 +1,53 @@
+{
+    "private": true,
+    "scripts": {
+        "start": "umi dev",
+        "dev": "npm run start:dev",
+        "start:dev": "cross-env REACT_APP_ENV=dev MOCK=none umi dev",
+        "build": "cross-env REACT_APP_ENV=prod MOCK=none ANALYZE=1 umi build",
+        "build:test": "cross-env REACT_APP_ENV=test MOCK=none ANALYZE=1 umi build",
+        "postinstall": "umi generate tmp",
+        "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+        "test": "umi-test",
+        "test:coverage": "umi-test --coverage",
+        "page": "node scripts/createPage",
+        "tep": "node scripts/createCompontent"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,jsx,less,md,json}": [
+            "prettier --write"
+        ],
+        "*.ts?(x)": [
+            "prettier --parser=typescript --write"
+        ]
+    },
+    "dependencies": {
+        "@ant-design/pro-layout": "^5.0.12",
+        "@umijs/preset-react": "1.x",
+        "@umijs/test": "^3.2.9",
+        "cross-env": "^7.0.2",
+        "cssnano": "^4.1.10",
+        "cssnano-preset-advanced": "^4.0.7",
+        "js-cookie": "^2.2.1",
+        "lint-staged": "^10.0.7",
+        "lodash": "^4.17.19",
+        "normalize.css": "^8.0.1",
+        "postcss-aspect-ratio-mini": "^1.1.0",
+        "postcss-cssnext": "^3.1.0",
+        "postcss-import": "^12.0.1",
+        "postcss-px-to-viewport": "^1.1.1",
+        "postcss-url": "^8.0.0",
+        "postcss-viewport-units": "^0.1.6",
+        "postcss-write-svg": "^3.0.1",
+        "prettier": "^1.19.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "redux-logger": "^3.0.6",
+        "store": "^2.0.12",
+        "umi": "^3.2.9",
+        "yorkie": "^2.0.0"
+    }
+}
