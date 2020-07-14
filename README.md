@@ -1,8 +1,8 @@
-# umi project
+# umi-h5
 
-## Getting Started
+## 技术架构
 
-Install dependencies,
+Umi+Dva+React+Hooks+Less+vw
 
 ```bash
 $ yarn
@@ -11,5 +11,5 @@ $ yarn
 Start the dev server,
 
 ```bash
-$ yarn start
+$ yarn dev
 ```
